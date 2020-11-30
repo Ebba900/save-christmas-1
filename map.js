@@ -6,6 +6,11 @@ function map(arr, func) {
     //      newArray[j] = func(arr[j])
 
     // returnera den nya arrayen
+    let NyArray = []
+    for (let i = 0; i < arr.length; i++) {
+        NyArray[i] = func(arr[i])
+    } 
+    return NyArray
 }
 
 // Test 1
@@ -23,4 +28,8 @@ console.log(newStringArray) // ['BOLL', 'HÄST', 'FLYGPLAN']
 console.log(stringArray)    // ['boll', 'häst', 'flygplan']
 
 // Test 3 - GÖR ETT EGET TEST HÄR
-console.log('\nTEST 3')
+console.log('\nTEST 3') 
+const MyTestArray = [2, 4, 6] 
+const MyNumberTestArray = map(MyTestArray, x => x/2)
+console.log(MyTestArray)
+console.log(MyNumberTestArray)
